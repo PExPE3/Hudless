@@ -19,7 +19,11 @@ public class HLClient implements ClientModInitializer {
         }
 
         HudRenderCallback.EVENT.register((matrixStack, delta) -> {
+            //? if =1.21.5 {
+            /*HudAnimationHandler.render(delta.getTickProgress(false));
+            *///?} else {
             HudAnimationHandler.render(delta.getTickDelta(false));
+            //?}
         });
 
 //        HLKeybinding.register();
