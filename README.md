@@ -39,7 +39,7 @@
 > Client-side Fabric mod that automatically hides HUD elements with customizable conditions and smooth animation.
 
 <div align="center">
-  <img src="https://cdn.modrinth.com/data/Os35nfkh/images/b01581dd52e32d703fbb5605f4851fbc639d024e.gif" width="1000px" alt="mod banner"/>
+  <img src="https://raw.githubusercontent.com/ZipeStudio/Hudless/refs/heads/master/img/showcase.gif" width="1000px" alt="mod banner"/>
 </div>
 
 ---
