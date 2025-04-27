@@ -44,7 +44,7 @@
 
 ---
 
-# ❗ Required
+# 🔷 Required
 
 🔹`YetAnotherConfigLib (YACL) mod`
 <div align="center">
