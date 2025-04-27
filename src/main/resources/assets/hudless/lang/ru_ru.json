@@ -1,0 +1,77 @@
+{
+  "modmenu.descriptionTranslation.${mod_id}": "Клиентский мод для Fabric, автоматически скрывающий элементы интерфейса с настраиваемыми условиями и анимацией.",
+
+  "hudless.modmenu.title": "Hudless",
+  "hudless.category.general": "Основные настройки",
+  "hudless.category.triggers": "Условия отображения",
+  "hudless.category.hud": "Элементы интерфейса",
+
+  "hudless.option.enableMod": "Включить мод",
+  "hudless.option.enableMod.desc": "Активировать или отключить функционал Hudless.",
+
+  "hudless.option.enableFade": "Плавное исчезновение",
+  "hudless.option.enableFade.desc": "Включить эффект постепенного уменьшения прозрачности элементов интерфейса при их скрытии.",
+
+  "hudless.option.visibleTicks": "Время отображения",
+  "hudless.option.visibleTicks.desc": "Время (в тиках), в течение которого интерфейс остаётся видимым после срабатывания условия.",
+
+  "hudless.option.hideSpeed": "Скорость скрытия",
+  "hudless.option.hideSpeed.desc": "Скорость, с которой элементы интерфейса перемещаются при исчезновении.",
+
+  "hudless.option.hideFadeSpeed": "Скорость прозрачности",
+  "hudless.option.hideFadeSpeed.desc": "Скорость уменьшения прозрачности элементов при исчезновении.",
+
+  "hudless.option.minY": "Минимальное положение по Y",
+  "hudless.option.minY.desc": "Минимальное значение по оси Y, до которого могут опускаться элементы интерфейса.",
+
+  "hudless.option.trigger.hunger": "При изменении голода",
+  "hudless.option.trigger.hunger.desc": "Показать интерфейс при изменении уровня голода.",
+
+  "hudless.option.trigger.health": "При изменении здоровья",
+  "hudless.option.trigger.health.desc": "Показать интерфейс при изменении здоровья игрока.",
+
+  "hudless.option.trigger.hotbar": "При смене слота",
+  "hudless.option.trigger.hotbar.desc": "Показать интерфейс при переключении слота в хотбаре.",
+
+  "hudless.option.trigger.armor": "При изменении брони",
+  "hudless.option.trigger.armor.desc": "Показать интерфейс при изменении количества брони.",
+
+  "hudless.option.trigger.air_bubbles": "При изменении пузырей воздуха",
+  "hudless.option.trigger.air_bubbles.desc": "Показать интерфейс при изменении пузырьков воздуха под водой.",
+
+  "hudless.option.trigger.effects": "При изменении эффектов",
+  "hudless.option.trigger.effects.desc": "Показать интерфейс при изменении активных эффектов (зелья и пр.).",
+
+  "hudless.option.trigger.mount_health": "При изменении здоровья маунта",
+  "hudless.option.trigger.mount_health.desc": "Показать интерфейс при изменении здоровья сущности, на которой вы едете.",
+
+  "hudless.option.status_bars": "Скрыть полоски статуса",
+  "hudless.option.status_bars.desc": "Скрыть индикаторы здоровья, голода, брони, пузырьков воздуха.",
+
+  "hudless.option.experience": "Скрыть полосу опыта",
+  "hudless.option.experience.desc": "Скрыть индикатор опыта.",
+
+  "hudless.option.effects": "Скрыть активные эффекты",
+  "hudless.option.effects.desc": "Скрыть отображение активных эффектов зелий.",
+
+  "hudless.option.scoreboard": "Скрыть скордборд",
+  "hudless.option.scoreboard.desc": "Скрыть боковую панель счёта.",
+
+  "hudless.option.overlay": "Скрыть оверлеи",
+  "hudless.option.overlay.desc": "Скрыть дополнительные оверлей-элементы.",
+
+  "hudless.option.hotbar": "Скрыть хотбар",
+  "hudless.option.hotbar.desc": "Скрыть панель быстрого доступа.",
+
+  "hudless.option.held_item_tooltip": "Скрыть подсказки предметов",
+  "hudless.option.held_item_tooltip.desc": "Скрыть всплывающие подсказки удерживаемых предметов.",
+
+  "hudless.option.crosshair": "Скрыть перекрестие",
+  "hudless.option.crosshair.desc": "Скрыть перекрестие прицеливания.",
+
+  "hudless.option.mount_jump": "Скрыть индикатор прыжка маунта",
+  "hudless.option.mount_jump.desc": "Скрыть шкалу прыжка при езде на маунте (например, лошади).",
+
+  "hudless.option.mount_health": "Скрыть здоровье маунта",
+  "hudless.option.mount_health.desc": "Скрыть индикатор здоровья сущности, на которой вы едете."
+}
