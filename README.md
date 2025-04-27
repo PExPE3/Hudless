@@ -47,5 +47,8 @@
 # ❗ Required
 
 🔹`YetAnotherConfigLib (YACL) mod`
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ZipeStudio/Hudless/refs/heads/master/img/showcase.gif" width="1000px" alt="mod banner"/>
+</div>
 
 ---
