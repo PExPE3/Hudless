@@ -20,7 +20,6 @@ public class ModMenuIntegration implements ModMenuApi {
 
                 .title(Text.translatable("hudless.modmenu.title"))
 
-                // === Общие настройки ===
                 .category(ConfigCategory.createBuilder()
                         .name(Text.translatable("hudless.category.general"))
                         .group(OptionGroup.createBuilder()
@@ -77,8 +76,6 @@ public class ModMenuIntegration implements ModMenuApi {
                                 .build())
                         .build())
 
-
-                // === Триггеры отображения ===
                 .category(ConfigCategory.createBuilder()
                         .name(Text.translatable("hudless.category.triggers"))
                         .group(OptionGroup.createBuilder()
@@ -135,8 +132,6 @@ public class ModMenuIntegration implements ModMenuApi {
                                 .build())
                         .build())
 
-
-                // === HUD элементы ===
                 .category(ConfigCategory.createBuilder()
                         .name(Text.translatable("hudless.category.hud"))
                         .group(OptionGroup.createBuilder()

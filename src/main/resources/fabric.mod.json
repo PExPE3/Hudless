@@ -32,7 +32,7 @@
         "minecraft": ">=${minecraft}",
         "java": ">=${java}",
         "${fabric_api_id}": "*",
-        "yet_another_config_lib_v3": "${yacl}"
+        "yet_another_config_lib_v3": ">=${yacl}"
     },
     "accessWidener": "aws/${minecraft}.accesswidener",
     "mixins": [
