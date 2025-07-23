@@ -1,3 +1,2 @@
-v1.0.2:
-- added support minecraft fabric 1.21.1
-- full fixed depends
+v1.1.0:
+- switch render to new system (1.21.6+)

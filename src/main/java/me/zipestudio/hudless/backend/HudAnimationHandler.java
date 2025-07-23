@@ -3,12 +3,13 @@ package me.zipestudio.hudless.backend;
 import lombok.Getter;
 import me.zipestudio.hudless.client.HLClient;
 import me.zipestudio.hudless.config.HLConfig;
+import me.zipestudio.hudless.config.HudElement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.util.math.MatrixStack;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Objects;
+
+import org.joml.Matrix3x2fStack;
 
 public class HudAnimationHandler {
 
@@ -64,39 +65,36 @@ public class HudAnimationHandler {
         }
     }
 
-    public static void beforeInject(HudElement element, DrawContext context, boolean useTranslate, CallbackInfo ci) {
-        beforeInject(element, context.getMatrices(), useTranslate, ci);
-    }
+    public static boolean beforeInject(HudElement element, DrawContext drawContext, boolean useTranslate) {
+        Matrix3x2fStack matrices = drawContext.getMatrices();
 
-    public static void beforeInject(HudElement element, MatrixStack matrices, boolean useTranslate, CallbackInfo ci) {
-
-        matrices.push();
-
+        matrices.pushMatrix();
         HLConfig config = HLClient.getConfig();
+
         if (!config.isEnableMod() || element.functionDisabled()) {
-            return;
+            return true;
         }
 
         if (y <= config.getMinY() || getAlpha() <= 0) {
-            ci.cancel();
-            return;
+            matrices.popMatrix();
+            return false;
         }
 
         if (useTranslate) {
-            matrices.translate(0, getY(), 0);
+            matrices.translate(0f, (float) getY());
         }
 
         HudElement.currentElement = element;
+        return true;
     }
 
-    public static void afterInject(DrawContext context) {
-        afterInject(context.getMatrices());
-    }
 
-    public static void afterInject(MatrixStack matrices) {
+    public static void afterInject(DrawContext drawContext) {
 
-        matrices.translate(0, HLClient.getConfig().getMaxY(), 0);
-        matrices.pop();
+        Matrix3x2fStack matrices = drawContext.getMatrices();
+
+        matrices.translate(0, HLClient.getConfig().getMaxY());
+        matrices.popMatrix();
 
         HudElement.currentElement = null;
     }

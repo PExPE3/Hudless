@@ -17,83 +17,55 @@ public class HLConfig {
                     .build())
             .build();
 
-
     // Settings
-
     @SerialEntry
     private boolean enableMod = true;
-
     @SerialEntry
     private boolean enableFade = true;
-
     @SerialEntry
     private int visibleTicks = 100;
-
     @SerialEntry
     private double hideSpeed = 0.2;
-
     @SerialEntry
     private double hideFadeSpeed = 0.05;
-
     @SerialEntry
     private int maxY = 0;
-
     @SerialEntry
     private int minY = -50;
-
 
     // Trigger Conditions
     @SerialEntry
     private boolean triggerHungerCondition = true;
-
     @SerialEntry
     private boolean triggerHealthCondition = true;
-
     @SerialEntry
     private boolean triggerHotbarCondition = true;
-
     @SerialEntry
     private boolean triggerArmorCondition = true;
-
     @SerialEntry
     private boolean triggerAirBubblesCondition = true;
-
     @SerialEntry
     private boolean triggerEffectsCondition = true;
-
     @SerialEntry
     private boolean triggerMountHealthCondition = true;
 
-
-    // Hud
+    // HUD Elements
     @SerialEntry
     private boolean hideStatusBars = true;
-
     @SerialEntry
     private boolean hideExperienceBar = true;
-
     @SerialEntry
     private boolean hideEffects = true;
-
     @SerialEntry
     private boolean hideScoreboardSidebar = true;
-
     @SerialEntry
-    private boolean hideOverlay = true;
-
+    private boolean hideMicsOverlays = false;
     @SerialEntry
     private boolean hideHotbar = true;
-
     @SerialEntry
     private boolean hideHeldItemTooltip = true;
-
     @SerialEntry
     private boolean hideCrosshair = true;
-
-    @SerialEntry
-    private boolean hideMountJumpBar = true;
-
     @SerialEntry
     private boolean hideMountHealth = true;
-
 }

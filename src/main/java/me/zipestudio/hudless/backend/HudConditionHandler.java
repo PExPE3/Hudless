@@ -24,11 +24,7 @@ public class HudConditionHandler {
             return;
         }
 
-        //? if <1.21.5 {
-        int currentSlot = player.getInventory().selectedSlot;
-        //?} else {
-         /*int currentSlot = player.getInventory().getSelectedSlot();
-        *///?}
+        int currentSlot = player.getInventory().getSelectedSlot();
 
         if (currentSlot != prevSlot) {
             prevSlot = currentSlot;
