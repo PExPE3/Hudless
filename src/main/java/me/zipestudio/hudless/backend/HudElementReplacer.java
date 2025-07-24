@@ -1,12 +1,15 @@
 package me.zipestudio.hudless.backend;
 
+//? if >=1.21.6 {
 import me.zipestudio.hudless.config.HudElement;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
 import net.minecraft.util.Identifier;
+//?}
 
 public class HudElementReplacer {
 
+    //? if >=1.21.6 {
     public static void register() {
         replace(VanillaHudElements.HEALTH_BAR, HudElement.STATUS_BARS);
         replace(VanillaHudElements.ARMOR_BAR, HudElement.STATUS_BARS);
@@ -38,5 +41,7 @@ public class HudElementReplacer {
             HudAnimationHandler.afterInject(drawContext);
         });
     }
+
+    //?}
 
 }

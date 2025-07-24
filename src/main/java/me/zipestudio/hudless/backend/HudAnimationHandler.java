@@ -9,7 +9,13 @@ import net.minecraft.client.gui.DrawContext;
 
 import java.util.Objects;
 
+//? if >=1.21.6 {
 import org.joml.Matrix3x2fStack;
+//?} else {
+/*import net.minecraft.client.util.math.MatrixStack;
+import org.joml.Matrix3x2fStack;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+*///?}
 
 public class HudAnimationHandler {
 
@@ -27,7 +33,6 @@ public class HudAnimationHandler {
     }
 
     public static void revealHud() {
-
         HLConfig config = HLClient.getConfig();
 
         y = config.getMaxY();
@@ -37,7 +42,6 @@ public class HudAnimationHandler {
         if (MinecraftClient.getInstance().world != null) {
             lastRevealed = MinecraftClient.getInstance().world.getTime();
         }
-
     }
 
     public static void render(float delta) {
@@ -53,18 +57,16 @@ public class HudAnimationHandler {
 
         if (MinecraftClient.getInstance().world != null) {
             if (MinecraftClient.getInstance().world.getTime() - lastRevealed >= config.getVisibleTicks()) {
-
                 if (y > config.getMinY()) {
                     speed += config.getHideSpeed() * delta;
                     y -= speed * delta;
                 }
-
                 alpha = Math.max(0, alpha - (int) (config.getHideFadeSpeed() * 255 * delta));
-
             }
         }
     }
 
+    //? if >=1.21.6 {
     public static boolean beforeInject(HudElement element, DrawContext drawContext, boolean useTranslate) {
         Matrix3x2fStack matrices = drawContext.getMatrices();
 
@@ -87,10 +89,34 @@ public class HudAnimationHandler {
         HudElement.currentElement = element;
         return true;
     }
+    //?} else {
+    /*public static void beforeInject(HudElement element, DrawContext context, CallbackInfo ci) {
+        beforeInject(element, context.getMatrices(), ci);
+    }
 
+    public static void beforeInject(HudElement element, MatrixStack matrices, CallbackInfo ci) {
+        matrices.push();
 
+        HLConfig config = HLClient.getConfig();
+        if (!config.isEnableMod() || element.functionDisabled()) {
+            return;
+        }
+
+        if (y <= config.getMinY() || getAlpha() <= 0) {
+            ci.cancel();
+            return;
+        }
+
+        if (element.isTranslate()) {
+            matrices.translate(0, (float) getY(), 0);
+        }
+
+        HudElement.currentElement = element;
+    }
+    *///?}
+
+    //? if >=1.21.6 {
     public static void afterInject(DrawContext drawContext) {
-
         Matrix3x2fStack matrices = drawContext.getMatrices();
 
         matrices.translate(0, HLClient.getConfig().getMaxY());
@@ -98,5 +124,16 @@ public class HudAnimationHandler {
 
         HudElement.currentElement = null;
     }
+    //?} else {
+    /*public static void afterInject(DrawContext context) {
+        afterInject(context.getMatrices());
+    }
 
+    public static void afterInject(MatrixStack matrices) {
+        matrices.translate(0, HLClient.getConfig().getMaxY(), 0);
+        matrices.pop();
+
+        HudElement.currentElement = null;
+    }
+    *///?}
 }
