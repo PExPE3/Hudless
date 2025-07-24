@@ -39,7 +39,7 @@ public class DrawContextMixin {
 
         return ColorHelper.getArgb(HudAnimationHandler.getAlpha(), 255, 255, 255);
     }
-    //?} else if >=1.21.5 {
+    //?} else if >=1.21.2 {
     /*@ModifyVariable(
             at = @At("HEAD"),
             method = "drawGuiTexture(Ljava/util/function/Function;Lnet/minecraft/util/Identifier;IIIII)V",
