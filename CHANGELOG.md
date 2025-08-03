@@ -1,2 +1,2 @@
-v2.0.1:
-- Fixed a bug that prevented markers from being hidden on the locator bar.
+v2.0.2:
+- Added support for Combat Roll mod [hotbar-option in config]

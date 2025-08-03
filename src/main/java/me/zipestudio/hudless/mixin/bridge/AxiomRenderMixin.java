@@ -1,4 +1,4 @@
-package me.zipestudio.hudless.mixin;
+package me.zipestudio.hudless.mixin.bridge;
 
 import me.zipestudio.hudless.backend.HudAnimationHandler;
 import me.zipestudio.hudless.config.HudElement;
