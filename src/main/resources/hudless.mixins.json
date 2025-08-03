@@ -6,9 +6,10 @@
   "mixins": [
   ],
   "client": [
+    "AxiomRenderMixin",
     "DrawContextMixin",
     "GameHudMixin",
-    "AxiomRenderMixin"
+    "LocatorBarMixin"
   ],
   "injectors": {
     "defaultRequire": 1

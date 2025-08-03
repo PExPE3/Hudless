@@ -1,5 +1,2 @@
-v2.0.0:
-- updated to minecraft versions 1.21.6-1.21.8
-- added support for hiding Axiom creative button (uses “hotbar option” config)
-- code refactoring
-- developer needs sleep
+v2.0.1:
+- Fixed a bug that prevented markers from being hidden on the locator bar.

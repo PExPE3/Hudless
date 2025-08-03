@@ -23,9 +23,9 @@ public class DrawContextMixin {
     //? if >=1.21.6 {
     @ModifyVariable(
             at = @At("HEAD"),
-            method = "drawGuiTexture(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/util/Identifier;IIIII)V",
+            method = "drawTexture(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/util/Identifier;IIFFIIIII)V",
             argsOnly = true,
-            index = 7
+            index = 11
     )
     private int injectDraw(int value) {
         if (!HLClient.getConfig().isEnableMod() || !HLClient.getConfig().isEnableFade()) {
@@ -42,9 +42,9 @@ public class DrawContextMixin {
     //?} else if >=1.21.2 {
     /*@ModifyVariable(
             at = @At("HEAD"),
-            method = "drawGuiTexture(Ljava/util/function/Function;Lnet/minecraft/util/Identifier;IIIII)V",
+            method = "drawTexture(Ljava/util/function/Function;Lnet/minecraft/util/Identifier;IIFFIIIII)V",
             argsOnly = true,
-            index = 7
+            index = 11
     )
     private int injectDraw(int value) {
         if (!HLClient.getConfig().isEnableMod() || !HLClient.getConfig().isEnableFade()) {

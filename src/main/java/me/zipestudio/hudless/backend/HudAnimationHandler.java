@@ -25,7 +25,7 @@ public class HudAnimationHandler {
     @Getter
     private static int alpha = 255;
 
-    private static long lastRevealed;
+    private static long lastHudVisibleTime;
 
     public static double getY() {
         HLConfig config = HLClient.getConfig();
@@ -40,7 +40,7 @@ public class HudAnimationHandler {
         alpha = 255;
 
         if (MinecraftClient.getInstance().world != null) {
-            lastRevealed = MinecraftClient.getInstance().world.getTime();
+            lastHudVisibleTime = MinecraftClient.getInstance().world.getTime();
         }
     }
 
@@ -56,7 +56,7 @@ public class HudAnimationHandler {
         }
 
         if (MinecraftClient.getInstance().world != null) {
-            if (MinecraftClient.getInstance().world.getTime() - lastRevealed >= config.getVisibleTicks()) {
+            if (MinecraftClient.getInstance().world.getTime() - lastHudVisibleTime >= config.getVisibleTicks()) {
                 if (y > config.getMinY()) {
                     speed += config.getHideSpeed() * delta;
                     y -= speed * delta;

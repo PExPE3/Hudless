@@ -3,6 +3,7 @@ package me.zipestudio.hudless.mixin;
 import me.zipestudio.hudless.backend.HudAnimationHandler;
 import me.zipestudio.hudless.backend.HudConditionHandler;
 import me.zipestudio.hudless.config.HudElement;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.render.RenderTickCounter;

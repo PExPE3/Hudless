@@ -19,7 +19,6 @@ public enum HudElement {
     SCOREBOARD(() -> HLClient.getConfig().isHideScoreboardSidebar(), false),
     MISC_OVERLAYS(() -> HLClient.getConfig().isHideMicsOverlays(), false);
 
-
     private final Supplier<Boolean> configGetter;
     private final boolean useTranslate;
 
